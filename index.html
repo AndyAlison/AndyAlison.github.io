@@ -13,22 +13,64 @@ h1{font-size:42px;margin:0} h1 span{color:#7ee787}
 a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
 .btn{display:inline-block;background:#238636;color:white;padding:12px 24px;border-radius:8px;font-weight:bold;margin:10px 5px 0 0}
 .btn:hover{background:#2ea043}
+
+/* ===== YOUR HERO FADEINUP FINAL - ADDED ===== */
+.hero .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero .reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero .hero-subtitle.reveal { transition-delay: 0.1s; }
+.hero .hero-title.reveal { transition-delay: 0.25s; }
+.hero .hero-text.reveal { transition-delay: 0.4s; }
+.hero .hero-buttons.reveal { transition-delay: 0.55s; }
+.hero .container > img { 
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: all 1s ease 0.7s;
+}
+.hero .container > img.reveal-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media(max-width:700px){ .hero .container{flex-direction:column} }
 </style>
 </head>
 <body>
-<div class="container">
-<h1>Hi, I'm Alison Pongoma</h1>
-<h3>Customer Support Specialist | CMS Ticketing, Email & Live Chat | Cape Town - Open to Remote</h3>
-<p>I help clients via CMS Ticketing, Email & Live Chat. I keep CRM data 100% clean and turn frustrated customers into happy returning customers. I also build clean, responsive websites.</p>
 
-<div>
-<span class="tag">CMS Ticketing</span>
-<span class="tag">CRM Hygiene</span>
-<span class="tag">Client Onboarding</span>
-<span class="tag">Email & Chat Support</span>
-<span class="tag">HTML/CSS/JS</span>
+<!-- HERO SECTION - FIXED: hero-container has NO reveal -->
+<div class="hero">
+<div class="hero-container">
+  <div class="container">
+    <div>
+      <div class="hero-subtitle reveal" style="color:#8b949e;letter-spacing:0.2em;font-size:13px;margin-bottom:10px">CUSTOMER SUPPORT SPECIALIST</div>
+      <h1 class="hero-title reveal">Hi, I'm <span>Alison Pongoma</span></h1>
+      <h3 class="hero-text reveal" style="font-weight:400;color:#8b949e;margin-top:10px">Customer Support Specialist | CMS Ticketing, Email & Live Chat | Cape Town - Open to Remote</h3>
+      <p class="hero-text reveal">I help clients via CMS Ticketing, Email & Live Chat. I keep CRM data 100% clean and turn frustrated customers into happy returning customers. I also build clean, responsive websites.</p>
+      <div class="hero-buttons reveal" style="margin-top:20px">
+        <span class="tag">CMS Ticketing</span>
+        <span class="tag">CRM Hygiene</span>
+        <span class="tag">Client Onboarding</span>
+        <span class="tag">Email & Chat Support</span>
+        <span class="tag">HTML/CSS/JS</span>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Alison" style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid #30363d">
+  </div>
+</div>
 </div>
 
+<div class="container">
 <div class="card">
 <h3>What I Do</h3>
 <ul>
@@ -44,4 +86,5 @@ a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
 <a href="https://github.com/AndyAlison/support-ticket-workflow" target="_blank">View on GitHub</a></p>
 <p><strong>2. Client Onboarding Guide</strong> - Guide for non-tech users<br>
 <a href="https://github.com/AndyAlison/client-onboarding-guide" target="_blank">View on GitHub</a></p>
-<p>
+<p><strong>3. Contact Form</strong> - Responsive HTML/CSS/JS form<br>
+<a href="https://github.com/AndyAlison/contact-form" target="_blank">View on GitHub</a
